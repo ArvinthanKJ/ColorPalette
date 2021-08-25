@@ -1,0 +1,21 @@
+<link rel="stylesheet" href="/assets/style.css" />
+
+<% if(docs.length!=0){ %>
+    <form id="form1" method="POST" action="/saved">   </form>
+
+<div id="teams">
+  <h1>Saved colors</h1>
+  <h3>Click respective button to remove color from saved</h3>
+  <form id="form2" method="POST" action="/teamInvites"></form>
+
+  <% docs.forEach(function(element) {%>
+  <br />
+  <div class="row" style="height: 20vh; background-color: <%=element%>"><h1><%=element%></h1>&emsp;<p class="submit" >
+    <input type="submit" form="form1" name="color" value= <%=element%>></input></p></div>
+    <% }); %>
+    <a href="dashboard">Back to dashboard</a>
+    <% }else{ %>
+    <p>No colors saved yet</p>
+    <% } %>
+  </div>
+</div>
