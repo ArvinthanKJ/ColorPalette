@@ -1,0 +1,14 @@
+<link rel="stylesheet" href="/assets/style.css" />
+
+<div class="container">
+  <form id="form1" method="POST" action="/palettedashboard"></form>
+  <% if(palette.length!=null){ %>
+  <h1>Your Palette</h1>
+  <% palette.forEach((element)=>{ %>
+  <br /><button form="form1" value="<%=element._id%>" name="but">
+    <%=element.name%>
+  </button>
+  <% }) %> <% } %>
+  <br />
+  <a href="/createpalette">Create Palette</a>
+</div>

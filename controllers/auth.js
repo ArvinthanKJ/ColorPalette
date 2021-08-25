@@ -59,7 +59,7 @@ module.exports = function (app, userID) {
 
               console.log(docs._id);
               // DONT FORGET TO PASS ID TO WIEW AND STORE IT IN LOCALSTORAGE
-              res.redirect("/dashboard?data=" + userID);
+              res.redirect("/palettedashboard?data=" + userID);
             } else {
               console.log("failure");
               res.redirect("/error");
